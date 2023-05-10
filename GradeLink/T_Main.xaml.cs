@@ -35,7 +35,7 @@ namespace GradeLink
 
 		public void Update_Datagrid()
 		{
-			string query = $"SELECT students.name, ROUND(AVG(grades.[value]),2), students.ID\r\nFROM students\r\nLEFT JOIN grades\r\nON students.id = grades.student AND grades.teacher = 2\r\nGROUP BY students.name, students.ID;\r\n";
+			string query = $"SELECT students.name, ROUND(AVG(grades.[value]),2), students.ID\r\nFROM students\r\nLEFT JOIN grades\r\nON students.id = grades.student AND grades.teacher = {ID}\r\nGROUP BY students.name, students.ID;\r\n";
 			SqlConnection sqlCon = new SqlConnection(connection);
 			sqlCon.Open();
 			try
@@ -60,7 +60,6 @@ namespace GradeLink
 			var row = (DataRowView)dataGrid.SelectedItem;
 			var value1 = row[2];
 
-            System.Windows.MessageBox.Show(value1.ToString());
 			new T_Student_Details(ID, value1.ToString()).Show();
 			Close();
 

@@ -59,5 +59,12 @@ namespace GradeLink
 			}
 
 		}
+
+		private void Back(object sender, RoutedEventArgs e)
+		{
+			new T_Student_Details(Teacher_ID, Student_ID).Show();
+			Close();
+
+		}
 	}
 }

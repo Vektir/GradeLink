@@ -13,6 +13,7 @@
         <TextBlock Style="{StaticResource TextBlockStyle1}" Height="38" Margin="219,90,219,0" Width="NaN" VerticalAlignment="Top" Text="Name"/>
         <Button Style="{StaticResource Style1}" Margin="332,389,332,10" Content="Create" Click="Button_Click"></Button>
         <Image Source="C:\Users\viktor\Downloads\gradebook_logo.png" Margin="-171,-25,431,303"/>
+        <Button Style="{StaticResource Style1}" Margin="13,10,633,322" Content="Update Grade" Click="Back" Opacity="0"/>
 
     </Grid>
 </Window>

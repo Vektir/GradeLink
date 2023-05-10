@@ -54,5 +54,32 @@ namespace GradeLink
 			}
 
 		}
+
+		private void Back(object sender, RoutedEventArgs e)
+		{
+			new T_Student_Details(Teacher_ID, Student_ID).Show();
+			Close();
+		}
+
+		private void Delete_Grade(object sender, RoutedEventArgs e)
+		{
+			string query = $"delete from grades where ID = {Grade_ID}";
+			SqlConnection sqlCon = new SqlConnection(connection);
+			sqlCon.Open();
+			try
+			{
+				SqlCommand command = new SqlCommand(query, sqlCon);
+				command.CommandType = CommandType.Text;
+				command.ExecuteNonQuery();
+
+				new T_Student_Details(Teacher_ID, Student_ID).Show();
+				Close();
+
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+		}
 	}
 }
