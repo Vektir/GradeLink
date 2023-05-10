@@ -1,0 +1,15 @@
+﻿<Window x:Class="GradeLink.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GradeLink"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="490" Width="815">
+    <Grid Height="450" Width="800" Background="DeepSkyBlue">
+        
+        <Button Style="{StaticResource Style1}" Margin="81,164,485,164" Height="NaN" Width="NaN" Click="Student_Button" Content="Student"></Button>
+        <Button Style="{StaticResource Style1}" Margin="485,164,81,164" Height="NaN" Width="NaN" Click="Teacher_Button" Content="Teacher"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="GradeLink.T_New_account"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GradeLink"
+        mc:Ignorable="d"
+        Title="T_New_account" Height="490" Width="815">
+    <Grid Height="450" Width="800" Background="DeepSkyBlue">
+        <Button Style="{StaticResource Style1}" Margin="332,389,332,10" Content="Create" Click="Button_Click"></Button>
+        <PasswordBox x:Name="password" Style="{StaticResource PasswordBoxStyle1}" Margin="185,232,185,0" Height="52" Width="NaN" VerticalAlignment="Top" />
+        <TextBox x:Name="username" Style="{StaticResource TextBoxStyle1}" Margin="185,141,185,0" Height="52" Width="NaN" VerticalAlignment="Top" ></TextBox>
+        <TextBlock Style="{StaticResource TextBlockStyle1}" Height="38" Margin="219,198,219,0" Width="NaN" VerticalAlignment="Top"><Run Text="Password"/><LineBreak/><Run/></TextBlock>
+        <TextBlock Style="{StaticResource TextBlockStyle1}" Height="38" Margin="219,103,219,0" Width="NaN" Text="Username" VerticalAlignment="Top"/>
+        <TextBlock Style="{StaticResource TextBlockStyle1}" Height="38" Margin="219,42,219,0" Width="NaN" Text="Enter New Credentials" VerticalAlignment="Top" FontSize="30"/>
+        <TextBlock Style="{StaticResource TextBlockStyle1}" Height="38" Margin="219,295,219,0" Width="NaN" VerticalAlignment="Top"><Run Text="Subject"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="subject" Style="{StaticResource TextBoxStyle1}" Margin="185,324,185,0" Height="52" Width="NaN" VerticalAlignment="Top" />
+
+    </Grid>
+</Window>
