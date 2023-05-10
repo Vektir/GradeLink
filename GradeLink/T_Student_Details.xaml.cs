@@ -70,5 +70,11 @@ namespace GradeLink
 			new T_New_Grade(Teacher_ID, Student_ID).Show();
 			Close();
 		}
+
+		private void Back(object sender, RoutedEventArgs e)
+		{
+			new T_Main(Teacher_ID).Show();
+			Close();
+		}
 	}
 }

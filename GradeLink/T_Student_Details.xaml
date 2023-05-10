@@ -7,8 +7,12 @@
         mc:Ignorable="d"
         Title="T_Student_Details" Height="490" Width="815">
     <Grid Height="450" Width="800" Background="DeepSkyBlue">
-        <DataGrid x:Name="dataGrid" Margin="48,43,48,95" SelectionChanged="DataGrid_SelectionChanged"></DataGrid>
+        <DataGrid x:Name="dataGrid" Margin="48,111,48,77" SelectionChanged="DataGrid_SelectionChanged" Style="{StaticResource DataGridStyle1}"></DataGrid>
 
         <Button Style="{StaticResource Style1}" Margin="332,380,332,19" Content="New Grade" Click="Button_Click"></Button>
+
+        <Image Source="C:\Users\viktor\Downloads\gradebook_logo.png" Margin="130,-34,130,312"/>
+        <Button Style="{StaticResource Style1}" Margin="332,1,332,344" Content="New Grade" Click="Back" Opacity="0"/>
+
     </Grid>
 </Window>

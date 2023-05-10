@@ -209,8 +209,14 @@
     <Compile Include="S_Login.xaml.cs">
       <DependentUpon>S_Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="S_Main.xaml.cs">
+      <DependentUpon>S_Main.xaml</DependentUpon>
+    </Compile>
     <Compile Include="S_New_account.xaml.cs">
       <DependentUpon>S_New_account.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="S_Subject_Details.xaml.cs">
+      <DependentUpon>S_Subject_Details.xaml</DependentUpon>
     </Compile>
     <Compile Include="T_Edit_Grade.xaml.cs">
       <DependentUpon>T_Edit_Grade.xaml</DependentUpon>
@@ -246,7 +252,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="S_Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="S_New_account.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="S_Subject_Details.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

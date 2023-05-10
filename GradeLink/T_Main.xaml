@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="T_Main" Height="490" Width="815">
     <Grid Height="450" Width="800" Background="DeepSkyBlue">
-        <DataGrid x:Name="dataGrid" Margin="88,99,88,39" SelectionChanged="DataGrid_SelectionChanged"></DataGrid>
+        <DataGrid x:Name="dataGrid" Margin="88,115,88,23" SelectionChanged="DataGrid_SelectionChanged" Style="{StaticResource DataGridStyle1}"></DataGrid>
+        <Image Source="C:\Users\viktor\Downloads\gradebook_logo.png" Margin="130,-33,130,311"/>
+
     </Grid>
 </Window>

@@ -13,5 +13,7 @@
         <TextBlock Style="{StaticResource TextBlockStyle1}" Height="38" Margin="219,252,219,0" Width="NaN" VerticalAlignment="Top"><Run Text="Password"/><LineBreak/><Run/></TextBlock>
         <TextBlock Style="{StaticResource TextBlockStyle1}" Height="38" Margin="219,135,219,0" Width="NaN" Text="Username" VerticalAlignment="Top"/>
         <TextBlock Style="{StaticResource TextBlockStyle1}" Height="38" Margin="219,42,219,0" Width="NaN" Text="Enter New Credentials" VerticalAlignment="Top" FontSize="30"/>
+        <Image Source="C:\Users\viktor\Downloads\gradebook_logo.png" Margin="-171,-25,431,303"/>
+
     </Grid>
 </Window>

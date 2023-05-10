@@ -12,6 +12,7 @@
         <TextBox x:Name="name" Style="{StaticResource TextBoxStyle1}" Margin="185,121,185,0" Height="52" Width="NaN" VerticalAlignment="Top" />
         <TextBlock Style="{StaticResource TextBlockStyle1}" Height="38" Margin="219,90,219,0" Width="NaN" VerticalAlignment="Top" Text="Name"/>
         <Button Style="{StaticResource Style1}" Margin="332,389,332,10" Content="Update Grade" Click="Button_Click"></Button>
+        <Image Source="C:\Users\viktor\Downloads\gradebook_logo.png" Margin="-171,-25,431,303"/>
 
     </Grid>
 </Window>

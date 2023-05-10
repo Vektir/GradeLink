@@ -47,8 +47,10 @@ namespace GradeLink
 				int a = Convert.ToInt32(command.ExecuteScalar());
 				if (a == 1)
 				{
-					//new S_Main().Show();
-					MessageBox.Show("works");
+					query = $"select ID from Students where [name] = '{username.Text}'";
+					command = new SqlCommand(query, sqlCon);
+					command.CommandType = CommandType.Text;
+					new S_Main(command.ExecuteScalar().ToString()).Show();
 					Close();
 				}
 

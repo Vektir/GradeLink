@@ -113,7 +113,9 @@
                                                 <RowDefinition Height="*"/>
                                                 <RowDefinition Height="Auto"/>
                                             </Grid.RowDefinitions>
-                                            <Button Command="{x:Static DataGrid.SelectAllCommand}" Width="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=CellsPanelHorizontalOffset}" Style="{DynamicResource {ComponentResourceKey ResourceId=DataGridSelectAllButtonStyle, TypeInTargetAssembly={x:Type DataGrid}}}" Focusable="false" Visibility="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=HeadersVisibility, Converter={x:Static DataGrid.HeadersVisibilityConverter}, ConverterParameter={x:Static DataGridHeadersVisibility.All}}" />
+                                            <ScrollContentPresenter Grid.ColumnSpan="3" Grid.RowSpan="3" CanContentScroll="{TemplateBinding CanContentScroll}"/>
+                                            <ScrollBar Grid.Column="2" Grid.Row="1" Name="PART_VerticalScrollBar" Orientation="Vertical" Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}" ViewportSize="{TemplateBinding ViewportHeight}" Maximum="{TemplateBinding ScrollableHeight}" Minimum="0" Value="{Binding Path=VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"/>
+                                            <ScrollBar Grid.Column="1" Grid.Row="2" Name="PART_HorizontalScrollBar" Orientation="Horizontal" Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}" ViewportSize="{TemplateBinding ViewportWidth}" Maximum="{TemplateBinding ScrollableWidth}" Minimum="0" Value="{Binding Path=HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"/>
                                         </Grid>
                                     </ControlTemplate>
                                 </ScrollViewer.Template>
@@ -125,21 +127,6 @@
             </Setter>
         </Style>
 
-        <!-- Rounded corner style for cells -->
-        <Style x:Key="DataGridCellStyle1" TargetType="{x:Type DataGridCell}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type DataGridCell}">
-                        <!-- Use a Border to round the corners -->
-                        <Border CornerRadius="8" Background="{TemplateBinding Background}">
-                            <!-- Add some padding to prevent the text from overlapping the rounded corners -->
-                            <ContentPresenter Margin="5"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
 
-        <!-- Rounded corner style for column headers -->
-    </Application.Resources>
+      </Application.Resources>
 </Application>

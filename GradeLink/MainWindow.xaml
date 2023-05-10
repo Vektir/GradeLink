@@ -10,6 +10,6 @@
         
         <Button Style="{StaticResource Style1}" Margin="81,164,485,164" Height="NaN" Width="NaN" Click="Student_Button" Content="Student"></Button>
         <Button Style="{StaticResource Style1}" Margin="485,164,81,164" Height="NaN" Width="NaN" Click="Teacher_Button" Content="Teacher"/>
-
+        <Image Source="C:\Users\viktor\Downloads\gradebook_logo.png" Margin="115,-8,146,286"></Image>
     </Grid>
 </Window>

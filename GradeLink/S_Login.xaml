@@ -13,6 +13,7 @@
         <PasswordBox x:Name="password" Style="{StaticResource PasswordBoxStyle1}" Margin="185,238,185,0" Height="52" Width="NaN" VerticalAlignment="Top" />
         <TextBlock Style="{StaticResource TextBlockStyle1}" Height="38" Margin="219,0,219,339" Width="NaN" Text="Username" VerticalAlignment="Bottom"/>
         <Button Style="{StaticResource Style1}" Margin="623,0,10,21" Height="39" Width="NaN" Content="New account" VerticalAlignment="Bottom" Click="Button_Click"/>
+        <Image Source="C:\Users\viktor\Downloads\gradebook_logo.png" Margin="-171,-25,431,303"/>
 
     </Grid>
 </Window>

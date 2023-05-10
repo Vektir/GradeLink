@@ -16,25 +16,31 @@ using System.Data.SqlClient;
 
 namespace GradeLink
 {
-    /// <summary>
-    /// Interaction logic for S_Main.xaml
-    /// </summary>
-    public partial class S_Main : Window
-    {
+	/// <summary>
+	/// Interaction logic for S_Subject_Details.xaml
+	/// </summary>
+	public partial class S_Subject_Details : Window
+	{
 		string connection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\viktor\\source\\repos\\GradeLink\\GradeLink\\Database1.mdf;Integrated Security=True";
-
 		string Student_ID;
-		public S_Main(string student_ID)
-        {
-            InitializeComponent();
+		string Teacher_ID;
+		public S_Subject_Details(string student_ID, string teacher_ID)
+		{
+			InitializeComponent();
 			Student_ID = student_ID;
+			Teacher_ID = teacher_ID;
+
 			Update_Grid();
+		}
+
+		private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+
         }
 
-
-        public void Update_Grid()
-        {
-            string query = $"SELECT teachers.id, teachers.subject, teachers.name, AVG(grades.value)\r\nFROM teachers\r\nJOIN grades\r\nON teachers.id = grades.teacher\r\nJOIN students\r\nON grades.student = students.id\r\nWHERE students.id = {Student_ID}\r\nGROUP BY teachers.id, teachers.subject, teachers.name;\r\n";
+		public void Update_Grid()
+		{
+			string query = $"select grades.name, grades.value from grades where student = {Student_ID} and teacher = {Teacher_ID}";
 			SqlConnection sqlCon = new SqlConnection(connection);
 			sqlCon.Open();
 			try
@@ -53,12 +59,9 @@ namespace GradeLink
 			}
 		}
 
-		private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-			var row = (DataRowView)dataGrid.SelectedItem;
-			var value1 = row[0];
-
-			new S_Subject_Details(Student_ID,value1.ToString()).Show();
+			new S_Main(Student_ID).Show();
 			Close();
 		}
 	}
